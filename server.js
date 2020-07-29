@@ -1,4 +1,5 @@
 const prerender = require("prerender");
+
 const server = prerender({
     logRequests: true,
     chromeFlags: [
@@ -9,4 +10,5 @@ const server = prerender({
         "--hide-scrollbars"
     ]
 });
+
 server.start();
