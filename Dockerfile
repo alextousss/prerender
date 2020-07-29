@@ -11,8 +11,8 @@ RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
     && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
 
 WORKDIR /home/chrome
-COPY . /home/chrome
 RUN  npm install prerender && chown -R chrome:chrome /home/chrome/
+COPY . /home/chrome
 
 # Run Chrome non-privileged
 USER chrome
